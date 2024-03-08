@@ -1,0 +1,136 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: monospace;
+  background-color: #160012;
+  color: white;
+}
+
+.game {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+  z-index: -2;
+}
+
+.game .title {
+  font-size: 25px;
+  color: #ddd;
+}
+
+.grid {
+  background-color: #3f0033;
+  width: fit-content;
+  height: fit-content;
+  max-width: 500px;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.grid .square {
+  width: 150px;
+  height: 150px;
+  background-color: #790063;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 150px;
+  color: #ddd;
+}
+
+.grid .square:hover {
+  background-color: #160012;
+}
+
+@media (max-width: 1019px) {
+  .grid {
+    max-width: 425px;
+  }
+  .grid .square {
+    width: 125px;
+    height: 125px;
+    font-size: 125px;
+  }
+}
+
+@media (max-width: 869px) {
+  .grid {
+    max-width: 350px;
+  }
+  .grid .square {
+    width: 100px;
+    height: 100px;
+    font-size: 100px;
+  }
+}
+
+@media (max-width: 720px) {
+  .grid {
+    width: 300px;
+  }
+  .grid .square {
+    width: 75px;
+    height: 75px;
+    font-size: 75px;
+  }
+}
+
+.winnerCard {
+  width: 200px;
+  text-align: center;
+  background-color: #3f0033;
+  padding: 15px;
+  border-radius: 15px;
+  border: 1px solid #ddd;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.blur-element {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #ddd;
+  z-index: -1;
+  filter: blur(500px);
+  opacity: 0.7;
+}
+
+.winnerCard .title {
+  font-size: 25px;
+  margin-bottom: 8px;
+  color: #ddd;
+}
+
+.winnerCard .btn {
+  border: none;
+  padding: 10px;
+  font-size: 15px;
+  background-color: #160012;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.winnerCard .btn:hover {
+  background-color: #790063;
+}
+
+.hidden {
+  display: none;
+}
